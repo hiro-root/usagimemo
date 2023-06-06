@@ -59,6 +59,7 @@ const theme = useTheme()
 
 const changeTheme = () => {
   theme.global.name.value = darkTheme.value ? 'dark' : 'light'
+  console.log(theme.global.name.value)
 }
 
 const mainImage = ref(false)
