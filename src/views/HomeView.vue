@@ -4,9 +4,9 @@
       <v-col cols="12" class="mb-4">
         <v-list nav color="pink-lighten-3" @click:select="clickItem" v-if="hasMemos">
           <v-list-item v-for="memo in memos" :key="memo.id">
-            <router-link :to="{ name: 'edit', params: { id: memo.id } }">
+            <router-link style="text-decoration: none; color: inherit;" :to="{ name: 'edit', params: { id: memo.id } }">
               <!-- {{ memo.title }} -->
-              <v-card hover>{{ memo.title }}</v-card>
+              <v-card  class="thumb-up" color="#e7c2e7" hover>{{ memo.title }}</v-card>
             </router-link>
           </v-list-item>
         </v-list>
@@ -37,3 +37,10 @@ export default {
   }
 }
 </script>
+<style>
+.thumb-up::before{
+  background-color: #ebeaea;
+}
+
+</style>
+
