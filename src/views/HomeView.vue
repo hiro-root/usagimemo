@@ -2,7 +2,7 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12" class="mb-4">
-        <v-list nav color="pink-lighten-3" @click:select="clickItem" v-if="hasMemos">
+        <v-list nav color="pink-lighten-4" @click:select="clickItem" v-if="hasMemos">
           <v-list-item v-for="memo in memos" :key="memo.id">
             <router-link style="text-decoration: none; color: inherit;" :to="{ name: 'edit', params: { id: memo.id } }">
               <!-- {{ memo.title }} -->
@@ -39,7 +39,7 @@ export default {
 </script>
 <style>
 .thumb-up::before{
-  background-color: #ebeaea;
+  background-color: #F8BBD0;
 }
 
 </style>

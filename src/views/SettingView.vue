@@ -44,7 +44,13 @@
         ></v-switch>
       </v-col>
     </v-row>
-    
+    <v-row justify="center" align-content="center">
+      <v-col>
+        <div style="gap: 1rem; display: flex; justify-content: center;">
+          <v-btn v-if="mainImage" color="grey-darken-3" @click="erase">全メモ強制消去</v-btn>
+        </div>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 <script setup>
@@ -80,5 +86,34 @@ const changeImage = () => {
 
   // }
 }
+const erase = () => {
+  // this.$router.push('/')
+
+  // prompt('表示したいメッセージをここに書く');
+
+  const result = confirm("削除して本当にいい？");
+  if (result) {
+  // OKの場合の処理
+  const chcknum = Math.floor(Math.random() * 65535) + 1
+  const admincheck = chcknum;
+  alert(chcknum);
+  const result = prompt('確認コードを入力してね');
+    if (admincheck == result){
+      localStorage.clear();
+    console.log("localStorageを消去")
+    return
+    }
+  // localStorage.clear();
+  // console.log("localStorageを消去")
+  return
+
+  } else {
+  // キャンセルの場合の処理
+  return
+  }
+
+}
+
+
 
 </script>

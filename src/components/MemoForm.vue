@@ -8,6 +8,7 @@
     <button @click="remove" v-if="memo.id">削除</button>
   </div> -->
   <div style="gap: 1rem; display: flex; justify-content: center;">
+    <v-btn color="pink-lighten-4" @click="back">戻る</v-btn>
     <v-btn color="pink-accent-2" @click="save">保存</v-btn>
     <v-btn color="grey-lighten-1" @click="remove" v-if="memo.id">削除</v-btn>
   </div>
@@ -52,8 +53,9 @@ export default {
             return
             }
 
-
-            
+        },
+        back() {
+            this.$router.push('/')
         }
     }
 }
