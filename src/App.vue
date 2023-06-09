@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <header>
-        <v-app-bar color="pink-lighten-4" app>
+        <v-app-bar image="@/assets/usagi.jpg" max-height="4px" color="pink-lighten-4" dence>
           <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
           <v-toolbar-title class="title">うさぎめも</v-toolbar-title>
         </v-app-bar>
