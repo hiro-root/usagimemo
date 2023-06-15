@@ -8,6 +8,8 @@ const vuexPersist = new VuexPersistence({
 export default createStore({
   state: {
     count: 0,
+    heart: 0,
+    bearheart: 0, 
     memos: []
   },
   getters: {
@@ -36,6 +38,12 @@ export default createStore({
     },
     delete (state, id) {
       state.memos = state.memos.filter(memo => memo.id !== id)
+    },
+    increment(state) {
+      state.heart++;
+    },
+    incrementbear(state) {
+      state.bearheart++;
     }
   },
   actions: {
